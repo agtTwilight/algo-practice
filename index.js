@@ -6,19 +6,51 @@
  * 
  */
 
-const fibonacci = (n) => {
-    fib = [0,1];
+// const fibonacci = (n) => {
+//     fib = [0,1];
 
-    for (let i = 2; i < n; i ++) {
-        fib.push(fib[i-1] + fib[i-2]);
+//     for (let i = 2; i < n; i ++) {
+//         fib.push(fib[i-1] + fib[i-2]);
+//     }
+
+//     return fib;
+// };
+
+// // Test cases
+// console.log(fibonacci(2));
+// console.log(fibonacci(3));
+// console.log(fibonacci(7));
+
+// // Big O = linear time complexity
+
+/**
+ * Factorial of a number
+ * "Given and integer `n` find the factorial of that integer"
+ * 
+ * The factorial of a non-negative integer `n`, denoted by `!n` is the product of all positive integers less than or equel to `n`.
+ * 
+ * Factorial of 0 = 1
+ */
+
+const factorial = (n) => {
+    if(n === 0) {
+        return 1;
     }
 
-    return fib;
-}
+    let i = n-1;
+    let ans = n;
 
-// Test cases
-console.log(fibonacci(2));
-console.log(fibonacci(3));
-console.log(fibonacci(7));
+    while (i > 0) {
+        ans = ans*i;
+        --i;
+    }
 
-// Big O = linear time complexity
+    return ans;
+};
+
+// test cases:
+console.log(factorial(0)); // 1
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
+
+// Big O = linear
