@@ -7,19 +7,15 @@
  */
 
 const fibonacci = (n) => {
-    arr = [];
+    fib = [0,1];
 
-    for (let i = 0; i < n; i ++) {
-        if (!arr.length) {
-            arr.push(0);
-        } else if (arr.length === 1) {
-            arr.push(1);
-        } else {
-            arr.push(arr[i-1] + arr[i-2]);
-        }
+    for (let i = 2; i < n; i ++) {
+        fib.push(fib[i-1] + fib[i-2]);
     }
 
-    return arr;
+    return fib;
 }
 
+console.log(fibonacci(2));
+console.log(fibonacci(3));
 console.log(fibonacci(7));
