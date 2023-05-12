@@ -62,18 +62,43 @@
  * A prime number is a natural number great4er than 1 that is not a product of two smaller natural numbers
  */
 
-const isPrime = (n) => {
-    for (let i = 2; i < n; i++) {
-        if(n%i === 0) {
-            return false;
-        };
-    };
+// const isPrime = (n) => {
+//     for (let i = 2; i < n; i++) {
+//         if(n%i === 0) {
+//             return false;
+//         };
+//     };
 
-    return true;
-};
+//     return true;
+// };
+
+// // test cases
+// console.log(isPrime(5));
+// console.log(isPrime(4));
+
+// // Big O = linear
+
+/**
+ * Power of Two
+ * 
+ * "given a postitive ineger `n` determine if the number is a power of 2 or not"
+ * 
+ * An integer is a power of two if there exists an integer `x` such that `n` === 2x
+ */
+
+const isPowerOfTwo = (n) => {
+    if(n === 1) {
+        return true;
+    } else if (n%2 === 0) {
+        return true;
+    } else {
+        return false;
+    };
+}
 
 // test cases
-console.log(isPrime(5));
-console.log(isPrime(4));
+console.log(isPowerOfTwo(1));
+console.log(isPowerOfTwo(2));
+console.log(isPowerOfTwo(8));
 
-// Big O = linear
+// Big 0 = Constant
