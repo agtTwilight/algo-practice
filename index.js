@@ -32,25 +32,48 @@
  * Factorial of 0 = 1
  */
 
-const factorial = (n) => {
-    if(n === 0) {
-        return 1;
-    }
+// const factorial = (n) => {
+//     if(n === 0) {
+//         return 1;
+//     }
 
-    let i = n-1;
-    let ans = n;
+//     let i = n-1;
+//     let ans = n;
 
-    while (i > 0) {
-        ans = ans*i;
-        --i;
-    }
+//     while (i > 0) {
+//         ans = ans*i;
+//         --i;
+//     }
 
-    return ans;
+//     return ans;
+// };
+
+// // test cases:
+// console.log(factorial(0)); // 1
+// console.log(factorial(4)); // 24
+// console.log(factorial(5)); // 120
+
+// // Big O = linear
+
+/**
+ * Prime Number
+ * "Given a natural number `n` determine if the number is prime or not"
+ * 
+ * A prime number is a natural number great4er than 1 that is not a product of two smaller natural numbers
+ */
+
+const isPrime = (n) => {
+    for (let i = 2; i < n; i++) {
+        if(n%i === 0) {
+            return false;
+        };
+    };
+
+    return true;
 };
 
-// test cases:
-console.log(factorial(0)); // 1
-console.log(factorial(4)); // 24
-console.log(factorial(5)); // 120
+// test cases
+console.log(isPrime(5));
+console.log(isPrime(4));
 
 // Big O = linear
