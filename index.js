@@ -16,6 +16,9 @@ const fibonacci = (n) => {
     return fib;
 }
 
+// Test cases
 console.log(fibonacci(2));
 console.log(fibonacci(3));
 console.log(fibonacci(7));
+
+// Big O = linear time complexity
